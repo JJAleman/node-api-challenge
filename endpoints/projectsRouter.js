@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
             res.status(200).json(projects)
         })
         .catch(err => {
-            console.log(err);
+            console.log("error with GET /projects/", err);
             res.status(500).json({error: "there was a problem fetching projects."})
         })
 });
